@@ -41,8 +41,8 @@ set /a num=%random% %%6 +1
 :read_choice
     set /p choice=Enter choice: 
     if !choice! EQU 1 (
+        timeout /t 1 >nul
         goto while_loop
-        timeout /t 1>nul
     ) else (
         if !choice! EQU 2 (
             goto exitloop
